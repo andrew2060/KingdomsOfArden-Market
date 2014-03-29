@@ -62,7 +62,6 @@ public class MarketInteractionListener implements Listener {
         }
         if(holder instanceof ProcessOrderBuyInventoryHolder) {
             event.setCancelled(true);
-
         } else if (holder instanceof MainMenuInventoryHolder) {
             event.setCancelled(true);
             processMainMenu(event);
@@ -122,6 +121,7 @@ public class MarketInteractionListener implements Listener {
                        ent.openInventory(inv);
                    }
                 });
+                return;
             }
             case AUCTION: {
                 
@@ -129,11 +129,42 @@ public class MarketInteractionListener implements Listener {
                 
             }
         } else {
+            switch(slot) {
             
+            case 46: {
+                break;
+            }
+            case 47: {
+                break; 
+            }
+            case 48: {
+                break;       
+            }
+            case 49: {
+                break; 
+            }
+            case 50: {
+                break; 
+            }
+            case 51: {
+                break; 
+            }
+            case 52: {
+                break; 
+            }
+            case 53: {
+                break; 
+            }
+            case 54: {
+                
+                break; 
+            }
+            
+            }
         }
     }
 
-    private void processCategoryBrowser(InventoryClickEvent event) {
+;    private void processCategoryBrowser(InventoryClickEvent event) {
         int slot = event.getSlot();
         if(slot <= 0 || slot > 54) {
             return;
